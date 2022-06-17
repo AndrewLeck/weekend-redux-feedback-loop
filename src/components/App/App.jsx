@@ -20,7 +20,7 @@ fetchFeedBack()
 const fetchFeedBack = () =>{
   axios({
     method: 'GET',
-    url:''
+    url:'/api/feedback'
   })
   .then((response) =>{
     dispatch({
