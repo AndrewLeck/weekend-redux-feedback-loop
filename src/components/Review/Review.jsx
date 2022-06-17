@@ -28,7 +28,7 @@ function Review(){
                 
                 
                 <button onClick={sendToSubmit}>SUBMIT</button>{/* Create a teneiry? When Review Not complete print Incomplete and grey out/ complete print Submit*/}
-                <button>INCOMPLETE</button>
+                {/* <button>INCOMPLETE</button> */}
                 
             </form>
         </>

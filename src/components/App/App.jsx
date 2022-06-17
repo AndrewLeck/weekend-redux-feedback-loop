@@ -14,25 +14,26 @@ function App() {
 const dispatch = useDispatch();
 
 useEffect(() => {
-fetchFeedBack()
+// fetchFeedBack()
 },[])
 
-const fetchFeedBack = () =>{
-  axios({
-    method: 'GET',
-    url:'/api/feedback'
-  })
-  .then((response) =>{
-    dispatch({
-      type:'SET_FEEDBACK',
-      payload: response.data
-    });
-    console.log('What are we getting', response.data)
-  })
-  .catch((err) => {
-    console.log('GET failed', err)
-  })
-}
+// const fetchFeedBack = () =>{
+//   axios({
+//     method: 'GET',
+//     url:'/api/feedback'
+//   })
+//   .then((response) =>{
+//     dispatch({
+//       type:'SET_FEEDBACK',
+//       payload: response.data
+//     });
+//     console.log('What are we getting', response.data)
+//   })
+//   .catch((err) => {
+//     console.log('GET failed', err)
+//   })
+// }
+
 
   return (
     

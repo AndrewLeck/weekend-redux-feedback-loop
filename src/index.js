@@ -8,17 +8,52 @@ import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 
 
-const feedBackList = (state = [], action) => {
+// const feedBackList = (state = [], action) => {
+//     switch(action.type){
+//         case 'SET_FEEDBACK' :
+//             return  action.payload
+//     }
+//     return state
+// }
+
+const feeling = (state = [], action) => {
     switch(action.type){
-        case 'SET_FEEDBACK' :
+        case 'ADD_FEELING' :
             return action.payload
     }
     return state
 }
 
+const understanding = (state = [], action) => {
+    switch(action.type){
+        case 'ADD_UNDERSTANDING' :
+            return action.payload
+    }
+    return state
+}
+
+const support = (state = [], action) => {
+    switch(action.type){
+        case 'ADD_SUPPORT' :
+            return action.payload
+    }
+    return state
+}
+const comments = (state = [], action) => {
+    switch(action.type){
+        case 'ADD_COMMENT' :
+            return action.payload
+    }
+    return state
+}
+
+
 const feedBackStore = createStore(
     combineReducers({
-        feedBackList
+        feeling,
+        understanding,
+        support,
+        comments
     }),
     applyMiddleware(logger)
 );

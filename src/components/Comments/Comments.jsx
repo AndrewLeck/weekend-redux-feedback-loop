@@ -1,21 +1,33 @@
-import {useHistory} from 'react-router-dom'
+import {useSelector, useDispatch} from 'react-redux';
+import {useState} from 'react';
+import {useHistory} from 'react-router-dom';
 function Comments (){
+
+    const dispatch = useDispatch();
+    const [commentstInput, setCommentsInput] = useState('');
     const history = useHistory();
+
     const sendToReview = () => {
         history.push('/api/review')
+        dispatch({
+            type:'ADD_COMMENT',
+            payload:{
+                commentstInput,
+            }
+        })
     }
     console.log('Inside Comments function')
 
     return(
         <>
             <h2>Any comments you want to leave?</h2>
-            <form>
                 <div>comments</div>
                 <input 
-                type="text" 
+                type="text"
+                value={commentstInput}
+                onChange={(event) => setCommentsInput(event.target.value)}
                 />
-                <span><button onClick={sendToReview}>NEXT</button></span>
-            </form>
+                <span><button onClick={() => sendToReview()}>NEXT</button></span>
         </>
     )
 }

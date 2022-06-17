@@ -5,7 +5,7 @@ There will be 4 views for the form parts.
     [x]  How well are you understanding the content?
     [x]  How well are you being supported?
     [x]  Any comments you want to leave?
-[]  Each part of the form should be at its own route. Clicking next should move the user to the appropriate step in the process.
+[X]  Each part of the form should be at its own route. Clicking next should move the user to the appropriate step in the process.
 [x]  Each step should only allow the user to advance to the next step if a score was provided. Be sure to tell the user in some way that a value must be provided.
 [x]  The `Comments` step does not need to be validated, an empty value is okay.
 []  The last step of the process will allow the user to review their feedback. Users are not able to change their input on this step or go back for Base Mode.
