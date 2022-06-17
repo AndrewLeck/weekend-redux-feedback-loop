@@ -6,6 +6,7 @@ import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
+import Submit from '../Submit/Submit';
 // import { HashRouter as Router, Route, Link } from 'react-router-dom';
 function App() {
 
@@ -33,6 +34,9 @@ function App() {
         {/* </Route> */}
         {/* <Route> */}
           <Review />
+        {/* </Route> */}
+        {/* <Route> */}
+          <Submit />
         {/* </Route> */}
       {/* </Router> */}
     </div>

@@ -23,7 +23,7 @@ function Review(){
                 </ul>
                 
                 {/* <Link> */}
-                <button>SUBMIT</button>{/* Create a teneiry? */}
+                <button>SUBMIT</button>{/* Create a teneiry? When Review Not complete print Incomplete and grey out/ complete print Submit*/}
                 <button>INCOMPLETE</button>
                 {/* </Link> */}
             </form>
