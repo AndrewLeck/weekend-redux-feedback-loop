@@ -1,10 +1,10 @@
 Base Mode Todo List
 []  Create a multi-part form that allows users to leave feedback for today. 
 There will be 4 views for the form parts.
-    []  How are you feeling today?
-    []  How well are you understanding the content?
-    []  How well are you being supported?
-    []  Any comments you want to leave?
+    [x]  How are you feeling today?
+    [x]  How well are you understanding the content?
+    [x]  How well are you being supported?
+    [x]  Any comments you want to leave?
 []  Each part of the form should be at its own route. Clicking next should move the user to the appropriate step in the process.
 []  Each step should only allow the user to advance to the next step if a score was provided. Be sure to tell the user in some way that a value must be provided.
 []  The `Comments` step does not need to be validated, an empty value is okay.
