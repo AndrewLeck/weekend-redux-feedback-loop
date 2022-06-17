@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import { useEffect } from 'react';
+import {useDispatch} from 'react-redux'
 import './App.css';
 import Feelings from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
@@ -9,6 +11,28 @@ import Review from '../Review/Review';
 import Submit from '../Submit/Submit';
 // import { HashRouter as Router, Route, Link } from 'react-router-dom';
 function App() {
+const dispatch = useDispatch();
+
+useEffect(() => {
+fetchFeedBack()
+},[])
+
+const fetchFeedBack = () =>{
+  axios({
+    method: 'GET',
+    url:''
+  })
+  .then((response) =>{
+    dispatch({
+      type:'SET_FEEDBACK',
+      payload: response.data
+    });
+    console.log('What are we getting', response.data)
+  })
+  .catch((err) => {
+    console.log('GET failed', err)
+  })
+}
 
   return (
     
