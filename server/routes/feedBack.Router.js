@@ -6,7 +6,6 @@ router.get('/', (req, res) => {
     console.log('GET /api/feedback')
     pool.query('SELECT * from "feedback";').then((results) =>{
         res.send(results.rows);
-        console.log('GET SUCESS', results.rows)
     }).catch((error) => {
         console.log('Error in server GET', error)
     });

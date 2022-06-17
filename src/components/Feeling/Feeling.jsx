@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Feelings (){
     console.log('Inside feelings function')
@@ -12,9 +12,9 @@ function Feelings (){
                 type="number" 
                 required
                 />
-                {/* <Link> */}
+                <Link to='/api/understanding'>
                 <span><button>NEXT</button></span>
-                {/* </Link> */}
+                </Link>
             </form>
         </>
     )

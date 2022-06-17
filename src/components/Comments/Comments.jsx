@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 function Comments (){
     console.log('Inside Comments function')
 
@@ -10,9 +10,9 @@ function Comments (){
                 <input 
                 type="text" 
                 />
-                {/* <Link> */}
+                <Link to='/api/feedback'>
                 <span><button>NEXT</button></span>
-                {/* </Link> */}
+                </Link>
             </form>
         </>
     )

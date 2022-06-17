@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Understanding (){
     console.log('Inside Understanding function')
@@ -12,9 +12,9 @@ function Understanding (){
                 type="number" 
                 required
                 />
-                {/* <Link> */}
+                <Link to='/api/support'>
                 <span><button>NEXT</button></span>
-                {/* </Link> */}
+                </Link>
             </form>
         </>
     )

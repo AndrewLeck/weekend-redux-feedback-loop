@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Support (){
     console.log('Inside Support function')
@@ -12,9 +12,9 @@ function Support (){
                 type="number" 
                 required
                 />
-                {/* <Link> */}
+                <Link to='/api/comments'>
                 <span><button>NEXT</button></span>
-                {/* </Link> */}
+                </Link>
             </form>
         </>
     )

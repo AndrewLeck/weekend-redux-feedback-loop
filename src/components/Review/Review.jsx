@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Review(){
     console.log('Inside Review function')
@@ -22,10 +22,10 @@ function Review(){
                     </li>
                 </ul>
                 
-                {/* <Link> */}
+                <Link to='/api/review'>
                 <button>SUBMIT</button>{/* Create a teneiry? When Review Not complete print Incomplete and grey out/ complete print Submit*/}
                 <button>INCOMPLETE</button>
-                {/* </Link> */}
+                </Link>
             </form>
         </>
     )

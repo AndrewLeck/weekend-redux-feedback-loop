@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Submit (){
     console.log('Inside Submit function')
@@ -7,9 +7,9 @@ function Submit (){
         <>
             <div>
                 <h2>Thank You!</h2>
-                {/* <Link> */}
-                    <button>Leave New FeedBack</button>
-                {/* </Link> */}
+                <Link to='/'>
+                    <button type='click'>Leave New FeedBack</button>
+                </Link>
             </div>
         </>
     )
