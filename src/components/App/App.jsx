@@ -5,6 +5,7 @@ import Feelings from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
+import Review from '../Review/Review';
 // import { HashRouter as Router, Route, Link } from 'react-router-dom';
 function App() {
 
@@ -29,6 +30,9 @@ function App() {
         {/* </Route> */}
         {/* <Route> */}
           <Comments />
+        {/* </Route> */}
+        {/* <Route> */}
+          <Review />
         {/* </Route> */}
       {/* </Router> */}
     </div>
