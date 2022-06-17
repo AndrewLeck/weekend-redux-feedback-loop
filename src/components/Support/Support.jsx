@@ -1,6 +1,10 @@
-import { Link } from 'react-router-dom';
+import {useHistory} from 'react-router-dom'
 
 function Support (){
+    const history = useHistory();
+    const sendToComments = () => {
+        history.push('/api/comments')
+    }
     console.log('Inside Support function')
 
     return(
@@ -12,9 +16,7 @@ function Support (){
                 type="number" 
                 required
                 />
-                <Link to='/api/comments'>
-                <span><button>NEXT</button></span>
-                </Link>
+                <span><button onClick={sendToComments}>NEXT</button></span>
             </form>
         </>
     )

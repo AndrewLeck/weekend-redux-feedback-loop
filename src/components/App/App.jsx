@@ -42,29 +42,29 @@ const fetchFeedBack = () =>{
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
       </header>
-        <Link to='/api/feedback'></Link>
+        <Link to='/'></Link>
         <Link to='/api/understanding'></Link>
         <Link to='/api/support'></Link>
         <Link to='/api/comments'></Link>
         <Link to='/api/review'></Link>
-        <Link to='/'></Link>
+        <Link to='/api/submit'></Link>
 
         <Route path='/' exact>
           <Feelings />
         </Route>
-        <Route path='/api/support' exact>
+        <Route path='/api/understanding' exact>
           <Understanding />
         </Route>
-        <Route path='/api/comments'exact>
+        <Route path='/api/support'exact>
           <Support />
         </Route>
-        <Route path='/api/feedback' exact>
+        <Route path='/api/comments' exact>
           <Comments />
         </Route>
         <Route path='/api/review' exact>
           <Review />
         </Route>
-        <Route path='/'exact>
+        <Route path='/api/submit'exact>
           <Submit />
         </Route>
       </Router>

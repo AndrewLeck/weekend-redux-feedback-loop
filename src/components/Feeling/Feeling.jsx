@@ -1,8 +1,11 @@
-import { Link } from 'react-router-dom';
-
+import {useHistory} from 'react-router-dom'
 function Feelings (){
+    const history = useHistory();
+    const sendToUnderstanding = () => {
+        history.push('/api/understanding')
+    }
     console.log('Inside feelings function')
-
+    
     return(
         <>
             <h2>How are you feeling today?</h2>
@@ -12,9 +15,9 @@ function Feelings (){
                 type="number" 
                 required
                 />
-                <Link to='/api/understanding'>
-                <span><button>NEXT</button></span>
-                </Link>
+                
+                <span><button onClick={sendToUnderstanding}>NEXT</button></span>
+                
             </form>
         </>
     )

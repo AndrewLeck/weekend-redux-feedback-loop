@@ -1,6 +1,11 @@
-import { Link } from 'react-router-dom';
+import {useHistory} from 'react-router-dom'
 
 function Understanding (){
+    const history = useHistory();
+    const sendToSupport = () => {
+        history.push('/api/support')
+    }
+    
     console.log('Inside Understanding function')
 
     return(
@@ -12,9 +17,9 @@ function Understanding (){
                 type="number" 
                 required
                 />
-                <Link to='/api/support'>
-                <span><button>NEXT</button></span>
-                </Link>
+                
+                <span><button onClick={sendToSupport}>NEXT</button></span>
+                
             </form>
         </>
     )

@@ -1,6 +1,10 @@
-import { Link } from 'react-router-dom';
+import {useHistory} from 'react-router-dom'
 
 function Review(){
+    const history = useHistory();
+    const sendToSubmit= () => {
+        history.push('/api/submit')
+    }
     console.log('Inside Review function')
 
     return(
@@ -22,10 +26,10 @@ function Review(){
                     </li>
                 </ul>
                 
-                <Link to='/api/review'>
-                <button>SUBMIT</button>{/* Create a teneiry? When Review Not complete print Incomplete and grey out/ complete print Submit*/}
+                
+                <button onClick={sendToSubmit}>SUBMIT</button>{/* Create a teneiry? When Review Not complete print Incomplete and grey out/ complete print Submit*/}
                 <button>INCOMPLETE</button>
-                </Link>
+                
             </form>
         </>
     )
