@@ -12,9 +12,7 @@ function Feelings (){
         console.log('inside sendtounderstanding')
         dispatch({
             type:'ADD_FEELING',
-            payload:{
-                feeling,
-            }
+            payload: feeling,
         })
     }
     

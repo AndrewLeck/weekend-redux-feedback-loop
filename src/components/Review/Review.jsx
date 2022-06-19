@@ -1,6 +1,17 @@
 import {useHistory} from 'react-router-dom'
+import {useSelector, useDispatch} from 'react-redux';
+
+
+
+
 
 function Review(){
+
+ const feeling = useSelector(store => store.feeling)
+ const understanding = useSelector(store => store.understanding)
+ const support = useSelector(store => store.support)
+ const comments = useSelector(store => store.comments)
+ 
     const history = useHistory();
     const sendToSubmit= () => {
         history.push('/api/submit')
@@ -13,16 +24,16 @@ function Review(){
             <form>
                 <ul>
                     <li>
-                        Feelings: 
+                        Feelings:{feeling}
                     </li>
                     <li>
-                        Understanding:
+                        Understanding:{understanding}
                     </li>
                     <li>
-                        Support:
+                        Support:{support}
                     </li>
                     <li>
-                        Comments:
+                        Comments:{comments}
                     </li>
                 </ul>
                 

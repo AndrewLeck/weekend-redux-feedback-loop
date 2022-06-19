@@ -4,16 +4,15 @@ import {useHistory} from 'react-router-dom';
 function Comments (){
 
     const dispatch = useDispatch();
-    const [commentstInput, setCommentsInput] = useState('');
+    const [commentsInput, setCommentsInput] = useState('');
     const history = useHistory();
 
     const sendToReview = () => {
         history.push('/api/review')
         dispatch({
             type:'ADD_COMMENT',
-            payload:{
-                commentstInput,
-            }
+            payload:
+                commentsInput,
         })
     }
     console.log('Inside Comments function')
@@ -24,7 +23,7 @@ function Comments (){
                 <div>comments</div>
                 <input 
                 type="text"
-                value={commentstInput}
+                value={commentsInput}
                 onChange={(event) => setCommentsInput(event.target.value)}
                 />
                 <span><button onClick={() => sendToReview()}>NEXT</button></span>

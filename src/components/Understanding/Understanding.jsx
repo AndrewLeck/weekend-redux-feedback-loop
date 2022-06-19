@@ -13,9 +13,8 @@ function Understanding (){
         console.log('Inside send to support');
         dispatch({
             type:'ADD_UNDERSTANDING',
-            payload:{
-                understandingInput,
-            }
+            payload: understandingInput,
+
         })
     }
     
@@ -31,7 +30,6 @@ function Understanding (){
                 value={understandingInput}
                 onChange={(event) => setUnderstandingInput(event.target.value)}
                 />
-                
                 <span><button onClick={() => sendToSupport()}>NEXT</button></span>
         </>
     )

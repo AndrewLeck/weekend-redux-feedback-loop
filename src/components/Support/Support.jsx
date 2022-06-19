@@ -14,9 +14,8 @@ function Support (){
         console.log('Inside Send to Comments');
         dispatch({
             type:'ADD_SUPPORT',
-            payload:{
+            payload:
                 supportInput,
-            }
         })
     }
     console.log('Inside Support function')
