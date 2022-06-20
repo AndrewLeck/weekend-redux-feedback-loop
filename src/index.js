@@ -23,7 +23,6 @@ const feeling = (state = [], action) => {
     }
     return state
 }
-
 const understanding = (state = [], action) => {
     switch(action.type){
         case 'ADD_UNDERSTANDING' :
@@ -31,7 +30,6 @@ const understanding = (state = [], action) => {
     }
     return state
 }
-
 const support = (state = [], action) => {
     switch(action.type){
         case 'ADD_SUPPORT' :

@@ -8,7 +8,7 @@ function Submit (){
     console.log('Inside Submit function')
 
     return(
-        <>
+        <>  
             <div>
                 <h2>Thank You!</h2>
                     <button onClick={sendBackToFeedBack}>Leave New FeedBack</button>
