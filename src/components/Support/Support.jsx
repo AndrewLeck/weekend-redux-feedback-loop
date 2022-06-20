@@ -10,13 +10,17 @@ function Support (){
   
 
     const sendToComments = () => {
-        history.push('/api/comments')
         console.log('Inside Send to Comments');
         dispatch({
             type:'ADD_SUPPORT',
             payload:
                 supportInput,
         })
+        if ( supportInput === ''){
+            alert("This field must be filled out");
+            return false;
+        }
+        history.push('/api/comments')
     }
     console.log('Inside Support function')
 

@@ -9,13 +9,16 @@ function Understanding (){
     const history = useHistory();
     
     const sendToSupport = () => {
-        history.push('/api/support')
         console.log('Inside send to support');
         dispatch({
             type:'ADD_UNDERSTANDING',
             payload: understandingInput,
-
         })
+        if ( understandingInput === ''){
+            alert("This field must be filled out");
+            return false;
+        }
+        history.push('/api/support')
     }
     
     console.log('Inside Understanding function')
