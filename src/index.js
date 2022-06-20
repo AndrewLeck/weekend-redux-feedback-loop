@@ -19,28 +19,37 @@ import registerServiceWorker from './registerServiceWorker';
 const feeling = (state = [], action) => {
     switch(action.type){
         case 'ADD_FEELING' :
-            return action.payload
+            return action.payload;
+        case 'RESET_DATA':
+            return []
     }
     return state
 }
 const understanding = (state = [], action) => {
     switch(action.type){
         case 'ADD_UNDERSTANDING' :
-            return action.payload
+            return action.payload;
+        case 'RESET_DATA':
+                return []
+
     }
     return state
 }
 const support = (state = [], action) => {
     switch(action.type){
         case 'ADD_SUPPORT' :
-            return action.payload
+            return action.payload;
+        case 'RESET_DATA':
+                return []
     }
     return state
 }
 const comments = (state = [], action) => {
     switch(action.type){
         case 'ADD_COMMENT' :
-            return action.payload
+            return action.payload;
+        case 'RESET_DATA':
+            return []
     }
     return state
 }

@@ -1,11 +1,16 @@
-import {useHistory} from 'react-router-dom'
+import {useHistory} from 'react-router-dom';
+import {useDispatch} from 'react-redux';
 
 
 function Submit (){
-
+const dispatch = useDispatch()
     const history = useHistory();
 
     const sendBackToFeedBack= () => {
+        dispatch ({
+            type:'RESET_DATA'
+        })
+
         history.push('/')
     }
     console.log('Inside Submit function')

@@ -30,6 +30,7 @@ function Review(){
             Swal.fire({
                 icon:'success',
                 title: 'Success',
+                text: 'Sucessfully submitted'
             })
         })
         .catch((err) => {
@@ -41,8 +42,36 @@ function Review(){
     console.log('Inside Review function')
     
     const changeFeelings = () =>{
-        history.push('/')
+        Swal.fire({
+            title: 'Edit Feelings',
+            input:'number',
+            inputValue: feeling,
+            confirmButtonText: 'Save Changes',
+            confirmButtonColor:'green',
+            showCancelButton: true,
+            cancelButtonColor:'red',
+            cancelButtonText: 'Cancel edit'
+          }).then((result) =>{
+              console.log(result)
+              if (result.isConfirmed){
+                  Swal.fire(
+                      'Saved!',
+                      'Feeling has been updated.',
+                      'success'
+                  )
+                  Swal.getInput(feeling)
+              } else if (result.dismiss ===  Swal.DismissReason.cancel){
+                  Swal.fire(
+                      'Cancelled',
+                      'No changes were made',
+                      'error'
+                  )
+              }
+              return feeling
+          })
+          console.log(feeling)
     }
+   
     return(
         <>
             <h2>Review Your Feedback</h2>
