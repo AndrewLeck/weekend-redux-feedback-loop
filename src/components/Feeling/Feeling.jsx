@@ -1,6 +1,7 @@
 import {useSelector, useDispatch} from 'react-redux';
 import {useHistory} from 'react-router-dom'
 import {useState} from 'react';
+import Swal from 'sweetalert2';
 function Feelings (){
     
 
@@ -15,7 +16,12 @@ function Feelings (){
             payload: feeling,
         })
         if (feeling === ''){
-            alert("This feild must be filled out");
+            // alert("This feild must be filled out");
+            Swal.fire({
+                icon: 'error',
+                title:'Oops...',
+                text: 'Please fill out the input feild'
+            })
             return false;
         }
         history.push('/api/understanding')

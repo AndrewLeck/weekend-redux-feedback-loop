@@ -2,7 +2,7 @@ import {useHistory} from 'react-router-dom'
 import {useSelector, useDispatch} from 'react-redux';
 import axios from 'axios';
 import '../Review/Review.css';
-
+import Swal from 'sweetalert2';
 
 function Review(){
 
@@ -26,35 +26,41 @@ function Review(){
             }
         })
         .then(() => {
-            console.log('POST SUCESS')
-            
+            console.log('POST SUCESS') 
+            Swal.fire({
+                icon:'success',
+                title: 'Success',
+            })
         })
         .catch((err) => {
             console.log('POST FAILED', err);
         })
 
     }
-
+    
     console.log('Inside Review function')
-
+    
+    const changeFeelings = () =>{
+        history.push('/')
+    }
     return(
         <>
             <h2>Review Your Feedback</h2>
                 <ul>
                     <li>
-                        Feelings: {feeling}
+                        Feelings: {feeling} <button onClick={changeFeelings}>Edit</button>
                     </li>
                     <li>
-                        Understanding: {understanding}
+                        Understanding: {understanding} <button>Edit</button>
                     </li>
                     <li>
-                        Support: {support}
+                        Support: {support} <button>Edit</button>
                     </li>
                     <li>
-                        Comments: {comments}
+                        Comments: {comments} <button>Edit</button>
                     </li>
                 </ul>
-                
+
                 
                 <button onClick={sendToSubmit}>SUBMIT</button>{/* Create a teneiry? When Review Not complete print Incomplete and grey out/ complete print Submit*/}
                 {/* <button>INCOMPLETE</button> */}

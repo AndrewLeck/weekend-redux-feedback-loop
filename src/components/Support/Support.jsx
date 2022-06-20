@@ -1,6 +1,7 @@
 import {useSelector, useDispatch} from 'react-redux';
 import {useState} from 'react';
 import {useHistory} from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 function Support (){
 
@@ -17,7 +18,12 @@ function Support (){
                 supportInput,
         })
         if ( supportInput === ''){
-            alert("This field must be filled out");
+            // alert("This field must be filled out");
+            Swal.fire({
+                icon: 'error',
+                title:'Oops...',
+                text: 'Please fill out the input feild'
+            })
             return false;
         }
         history.push('/api/comments')
